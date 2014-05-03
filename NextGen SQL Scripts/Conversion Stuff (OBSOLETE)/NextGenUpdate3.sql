@@ -1,0 +1,2 @@
+INSERT INTO NGDEMOGRAPHIC (Person_Nbr) 
+SELECT Person_Number  from tblNextGen10_26_2012 where NGDEMOGRAPHIC.

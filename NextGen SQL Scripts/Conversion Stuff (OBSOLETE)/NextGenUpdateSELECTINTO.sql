@@ -1,0 +1,2 @@
+INSERT INTO NEXTGENDUMMY(Last_Name, First_Name, SSN, DOB, Sex, City, State, Zip, Referring_Prov, User_Defined1, User_Defined2, User_Defined3, User_Defined4, User_Defined5, User_Defined6, User_Defined7, User_Defined8, Guar_Name, Address1, Sec_Address1) 
+SELECT LAST_NAME, FIRST_NAME, SSN, BIRTHDATE, GENDER, CITY, STATE, ZIPCODE, REFERRING_PCP_NAME, podiatry, dental, optometry, audiology, dm, consent, skilled, hospice, ADDR3, ADDR1, ADDR4  from tblNextGen10_26_2012

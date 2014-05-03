@@ -1,0 +1,57 @@
+SELECT     TOP (100) PERCENT doctorID, doctorFName, doctorLName, doctorActive, doctorType,
+                          (SELECT     COUNT(*) AS January
+                            FROM          dbo.tblVisitInformation
+                            WHERE      (dos BETWEEN '2013-01-01 00:00:00.000' AND '2013-01-31 00:00:00.000') AND (doctorID = dbo.tblDoctor.doctorID) AND (cpt0 IN (24, 142)) OR
+                                                   (dos BETWEEN '2013-01-01 00:00:00.000' AND '2013-01-31 00:00:00.000') AND (doctorID = dbo.tblDoctor.doctorID) AND (cpt1 IN (24, 142)) OR
+                                                   (dos BETWEEN '2013-01-01 00:00:00.000' AND '2013-01-31 00:00:00.000') AND (doctorID = dbo.tblDoctor.doctorID) AND (cpt2 IN (24, 142)) OR
+                                                   (dos BETWEEN '2013-01-01 00:00:00.000' AND '2013-01-31 00:00:00.000') AND (doctorID = dbo.tblDoctor.doctorID) AND (cpt3 IN (24, 142)) OR
+                                                   (dos BETWEEN '2013-01-01 00:00:00.000' AND '2013-01-31 00:00:00.000') AND (doctorID = dbo.tblDoctor.doctorID) AND (cpt4 IN (24, 142)) OR
+                                                   (dos BETWEEN '2013-01-01 00:00:00.000' AND '2013-01-31 00:00:00.000') AND (doctorID = dbo.tblDoctor.doctorID) AND (cpt5 IN (24, 142)) OR
+                                                   (dos BETWEEN '2013-01-01 00:00:00.000' AND '2013-01-31 00:00:00.000') AND (doctorID = dbo.tblDoctor.doctorID) AND (cpt6 IN (24, 142)) OR
+                                                   (dos BETWEEN '2013-01-01 00:00:00.000' AND '2013-01-31 00:00:00.000') AND (doctorID = dbo.tblDoctor.doctorID) AND (cpt7 IN (24, 142)) OR
+                                                   (dos BETWEEN '2013-01-01 00:00:00.000' AND '2013-01-31 00:00:00.000') AND (doctorID = dbo.tblDoctor.doctorID) AND (cpt8 IN (24, 142)) OR
+                                                   (dos BETWEEN '2013-01-01 00:00:00.000' AND '2013-01-31 00:00:00.000') AND (doctorID = dbo.tblDoctor.doctorID) AND (cpt9 IN (24, 142))) AS January
+                                                   , 
+                           (SELECT     COUNT(*) AS February
+                            FROM          dbo.tblVisitInformation
+                            WHERE      (dos BETWEEN '2013-02-01 00:00:00.000' AND '2013-02-28 00:00:00.000') AND (doctorID = dbo.tblDoctor.doctorID) AND (cpt0 IN (24, 142)) OR
+                                                   (dos BETWEEN '2013-02-01 00:00:00.000' AND '2013-02-28 00:00:00.000') AND (doctorID = dbo.tblDoctor.doctorID) AND (cpt1 IN (24, 142)) OR
+                                                   (dos BETWEEN '2013-02-01 00:00:00.000' AND '2013-02-28 00:00:00.000') AND (doctorID = dbo.tblDoctor.doctorID) AND (cpt2 IN (24, 142)) OR
+                                                   (dos BETWEEN '2013-02-01 00:00:00.000' AND '2013-02-28 00:00:00.000') AND (doctorID = dbo.tblDoctor.doctorID) AND (cpt3 IN (24, 142)) OR
+                                                   (dos BETWEEN '2013-02-01 00:00:00.000' AND '2013-02-28 00:00:00.000') AND (doctorID = dbo.tblDoctor.doctorID) AND (cpt4 IN (24, 142)) OR
+                                                   (dos BETWEEN '2013-02-01 00:00:00.000' AND '2013-02-28 00:00:00.000') AND (doctorID = dbo.tblDoctor.doctorID) AND (cpt5 IN (24, 142)) OR
+                                                   (dos BETWEEN '2013-02-01 00:00:00.000' AND '2013-02-28 00:00:00.000') AND (doctorID = dbo.tblDoctor.doctorID) AND (cpt6 IN (24, 142)) OR
+                                                   (dos BETWEEN '2013-02-01 00:00:00.000' AND '2013-02-28 00:00:00.000') AND (doctorID = dbo.tblDoctor.doctorID) AND (cpt7 IN (24, 142)) OR
+                                                   (dos BETWEEN '2013-02-01 00:00:00.000' AND '2013-02-28 00:00:00.000') AND (doctorID = dbo.tblDoctor.doctorID) AND (cpt8 IN (24, 142)) OR
+                                                   (dos BETWEEN '2013-02-01 00:00:00.000' AND '2013-02-28 00:00:00.000') AND (doctorID = dbo.tblDoctor.doctorID) AND (cpt9 IN (24, 142))) AS February
+                                                   , 
+                           (SELECT     COUNT(*) AS March
+                            FROM          dbo.tblVisitInformation
+                            WHERE      (dos BETWEEN '2013-03-01 00:00:00.000' AND '2013-03-31 00:00:00.000') AND (doctorID = dbo.tblDoctor.doctorID) AND (cpt0 IN (24, 142)) OR
+                                                   (dos BETWEEN '2013-03-01 00:00:00.000' AND '2013-03-31 00:00:00.000') AND (doctorID = dbo.tblDoctor.doctorID) AND (cpt1 IN (24, 142)) OR
+                                                   (dos BETWEEN '2013-03-01 00:00:00.000' AND '2013-03-31 00:00:00.000') AND (doctorID = dbo.tblDoctor.doctorID) AND (cpt2 IN (24, 142)) OR
+                                                   (dos BETWEEN '2013-03-01 00:00:00.000' AND '2013-03-31 00:00:00.000') AND (doctorID = dbo.tblDoctor.doctorID) AND (cpt3 IN (24, 142)) OR
+                                                   (dos BETWEEN '2013-03-01 00:00:00.000' AND '2013-03-31 00:00:00.000') AND (doctorID = dbo.tblDoctor.doctorID) AND (cpt4 IN (24, 142)) OR
+                                                   (dos BETWEEN '2013-03-01 00:00:00.000' AND '2013-03-31 00:00:00.000') AND (doctorID = dbo.tblDoctor.doctorID) AND (cpt5 IN (24, 142)) OR
+                                                   (dos BETWEEN '2013-03-01 00:00:00.000' AND '2013-03-31 00:00:00.000') AND (doctorID = dbo.tblDoctor.doctorID) AND (cpt6 IN (24, 142)) OR
+                                                   (dos BETWEEN '2013-03-01 00:00:00.000' AND '2013-03-31 00:00:00.000') AND (doctorID = dbo.tblDoctor.doctorID) AND (cpt7 IN (24, 142)) OR
+                                                   (dos BETWEEN '2013-03-01 00:00:00.000' AND '2013-03-31 00:00:00.000') AND (doctorID = dbo.tblDoctor.doctorID) AND (cpt8 IN (24, 142)) OR
+                                                   (dos BETWEEN '2013-03-01 00:00:00.000' AND '2013-03-31 00:00:00.000') AND (doctorID = dbo.tblDoctor.doctorID) AND (cpt9 IN (24, 142))) AS March
+                                                   , 
+                           (SELECT     COUNT(*) AS April
+                            FROM          dbo.tblVisitInformation
+                            WHERE      (dos BETWEEN '2013-04-01 00:00:00.000' AND '04-31-2013 00:00:00.000') AND (doctorID = dbo.tblDoctor.doctorID) AND (cpt0 IN (24, 142)) OR
+                                                   (dos BETWEEN '2013-04-01 00:00:00.000' AND '2013-04-30 00:00:00.000') AND (doctorID = dbo.tblDoctor.doctorID) AND (cpt1 IN (24, 142)) OR
+                                                   (dos BETWEEN '2013-04-01 00:00:00.000' AND '2013-04-30 00:00:00.000') AND (doctorID = dbo.tblDoctor.doctorID) AND (cpt2 IN (24, 142)) OR
+                                                   (dos BETWEEN '2013-04-01 00:00:00.000' AND '2013-04-30 00:00:00.000') AND (doctorID = dbo.tblDoctor.doctorID) AND (cpt3 IN (24, 142)) OR
+                                                   (dos BETWEEN '2013-04-01 00:00:00.000' AND '2013-04-30 00:00:00.000') AND (doctorID = dbo.tblDoctor.doctorID) AND (cpt4 IN (24, 142)) OR
+                                                   (dos BETWEEN '2013-04-01 00:00:00.000' AND '2013-04-30 00:00:00.000') AND (doctorID = dbo.tblDoctor.doctorID) AND (cpt5 IN (24, 142)) OR
+                                                   (dos BETWEEN '2013-04-01 00:00:00.000' AND '2013-04-30 00:00:00.000') AND (doctorID = dbo.tblDoctor.doctorID) AND (cpt6 IN (24, 142)) OR
+                                                   (dos BETWEEN '2013-04-01 00:00:00.000' AND '2013-04-30 00:00:00.000') AND (doctorID = dbo.tblDoctor.doctorID) AND (cpt7 IN (24, 142)) OR
+                                                   (dos BETWEEN '2013-04-01 00:00:00.000' AND '2013-04-30 00:00:00.000') AND (doctorID = dbo.tblDoctor.doctorID) AND (cpt8 IN (24, 142)) OR
+                                                   (dos BETWEEN '2013-04-01 00:00:00.000' AND '2013-04-30 00:00:00.000') AND (doctorID = dbo.tblDoctor.doctorID) AND (cpt9 IN (24, 142))) AS April
+                                                   
+                                                   
+FROM         dbo.tblDoctor
+WHERE     (doctorType = N'Aggeus')
+ORDER BY doctorFName
